@@ -6,6 +6,8 @@
     <b>Autor:</b> {{post.author.first_name}}</p>
     <p>{{post.content}}</p>
 
-    <p><a class="btn btn-secondary" href="{% url 'home' %}" role="button">Voltar</a></p>
+    <p><a class="btn btn-secondary" href="{% url 'home' %}" role="button">Voltar</a>
+       <a class="btn btn-success" href="{% url 'post_update' post.pk %}" role="button">Editar</a>
+    </p>
 {% endblock content %}
 

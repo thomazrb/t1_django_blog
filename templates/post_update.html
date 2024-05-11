@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load bootstrap %}
+
+{% block content %}
+    <h1>Editar Post</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <p>
+        <a class="btn btn-secondary" href="{% url 'home' %}" role="button">Voltar</a>
+        <input class="btn btn-primary" type="submit" value="Atualizar"></p>
+    </form>
+
+{% endblock content %}
+
