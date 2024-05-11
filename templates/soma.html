@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Soma de Números:</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="numero1">
+        <input type="text" name="numero2">
+        <br/>
+        {{mensagem}}
+        <br/>
+        <button type="submit">Somar</button>
+    </form>
+{% endblock content %}
+
