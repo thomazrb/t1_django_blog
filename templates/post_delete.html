@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Apagar Post</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <p>Tem certeza que você quer apagar o post <b>{{ post.title}}</b> criado em <b>{{ post.date }}</b> por <b>{{post.author.first_name}}</b></p>
+    <a class="btn btn-secondary" href="{% url 'home' %}" role="button">Voltar</a>
+    <input class="btn btn-danger" type="submit" value="Apagar"></p>
+</form>
+{% endblock content %}
+
